@@ -10,7 +10,6 @@ gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -64,3 +63,6 @@ end
 
 gem 'react_on_rails', '13.0.1'         # prefer exact gem version to match npm version
 gem 'shakapacker', '6.4.0'             # prefer exact gem version to match npm version
+gem "mini_racer", platforms: :ruby
+
+gem "pg", "~> 1.4"
