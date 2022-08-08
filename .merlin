@@ -1,0 +1,16 @@
+####{BSB GENERATED: NO EDIT
+FLG -ppx '/home/atout/Desktop/todo/node_modules/rescript/linux/bsc.exe -as-ppx -bs-jsx 3'
+S /home/atout/Desktop/todo/node_modules/rescript/lib/ocaml
+B /home/atout/Desktop/todo/node_modules/rescript/lib/ocaml
+FLG -w +a-4-9-20-40-41-42-50-61-102
+S /home/atout/Desktop/todo/node_modules/@rescript/react/lib/ocaml
+B /home/atout/Desktop/todo/node_modules/@rescript/react/lib/ocaml
+S client/bundles
+B lib/bs/client/bundles
+S client/bundles/NavBar
+B lib/bs/client/bundles/NavBar
+S client/bundles/Auth
+B lib/bs/client/bundles/Auth
+S client/bundles/HomePage
+B lib/bs/client/bundles/HomePage
+####BSB GENERATED: NO EDIT}
