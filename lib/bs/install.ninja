@@ -3,24 +3,8 @@ rule cp
   command = cp $i $out
 rule touch
  command = touch $out
-o App.cmi : cp ../bs/client/bundles/App.cmi
-o App.cmj : cp ../bs/client/bundles/App.cmj
-o App.cmt : cp ../bs/client/bundles/App.cmt
-o App.res : cp ../../client/bundles/App.res
-o NavBar.cmi : cp ../bs/client/bundles/NavBar/NavBar.cmi
-o NavBar.cmj : cp ../bs/client/bundles/NavBar/NavBar.cmj
-o NavBar.cmt : cp ../bs/client/bundles/NavBar/NavBar.cmt
-o NavBar.res : cp ../../client/bundles/NavBar/NavBar.res
-o Login.cmi : cp ../bs/client/bundles/Auth/Login.cmi
-o Login.cmj : cp ../bs/client/bundles/Auth/Login.cmj
-o Login.cmt : cp ../bs/client/bundles/Auth/Login.cmt
-o Login.res : cp ../../client/bundles/Auth/Login.res
-o Signup.cmi : cp ../bs/client/bundles/Auth/Signup.cmi
-o Signup.cmj : cp ../bs/client/bundles/Auth/Signup.cmj
-o Signup.cmt : cp ../bs/client/bundles/Auth/Signup.cmt
-o Signup.res : cp ../../client/bundles/Auth/Signup.res
 o HomePage.cmi : cp ../bs/client/bundles/HomePage/HomePage.cmi
 o HomePage.cmj : cp ../bs/client/bundles/HomePage/HomePage.cmj
 o HomePage.cmt : cp ../bs/client/bundles/HomePage/HomePage.cmt
 o HomePage.res : cp ../../client/bundles/HomePage/HomePage.res
-build install.stamp : touch App.cmi App.cmj NavBar.cmi NavBar.cmj Login.cmi Login.cmj Signup.cmi Signup.cmj HomePage.cmi HomePage.cmj 
+build install.stamp : touch HomePage.cmi HomePage.cmj 

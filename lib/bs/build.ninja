@@ -1,26 +1,15 @@
 rescript = 1
 g_finger := /home/atout/Desktop/todo/node_modules/@rescript/react/lib/ocaml/install.stamp
+g_finger := /home/atout/Desktop/todo/node_modules/@ryyppy/rescript-promise/lib/ocaml/install.stamp
 rule astj
   command = /home/atout/Desktop/todo/node_modules/rescript/linux/bsc.exe  -bs-v 9.1.4 -bs-jsx 3  -absname -bs-ast -o $out $i
-o client/bundles/App.ast : astj ../../client/bundles/App.res
+o client/bundles/HomePage/HomePage.ast : astj ../../client/bundles/HomePage/HomePage.res
 rule deps
-  command = /home/atout/Desktop/todo/node_modules/rescript/linux/bsb_helper.exe -hash abc2244b9f63da20c943428edbf3dece $in
+  command = /home/atout/Desktop/todo/node_modules/rescript/linux/bsb_helper.exe -hash b8c0af80d5f3cf7b1164fd1d9512d347 $in
   restat = 1
-o client/bundles/App.d : deps client/bundles/App.ast
+o client/bundles/HomePage/HomePage.d : deps client/bundles/HomePage/HomePage.ast
 rule mij
-  command = /home/atout/Desktop/todo/node_modules/rescript/linux/bsc.exe -I client/bundles/HomePage -I client/bundles/Auth -I client/bundles/TodoCard -I client/bundles/NavBar -I client/bundles -I client/packs -I client -I /home/atout/Desktop/todo/node_modules/@rescript/react/lib/ocaml   -bs-package-name your-project-name -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = /home/atout/Desktop/todo/node_modules/rescript/linux/bsc.exe -I client/bundles/HomePage -I client/bundles -I client/packs -I client -I /home/atout/Desktop/todo/node_modules/@rescript/react/lib/ocaml -I /home/atout/Desktop/todo/node_modules/@ryyppy/rescript-promise/lib/ocaml   -bs-package-name your-project-name -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
-o client/bundles/App.cmj client/bundles/App.cmi ../../client/bundles/App.bs.js : mij client/bundles/App.ast
-o client/bundles/NavBar/NavBar.ast : astj ../../client/bundles/NavBar/NavBar.res
-o client/bundles/NavBar/NavBar.d : deps client/bundles/NavBar/NavBar.ast
-o client/bundles/NavBar/NavBar.cmj client/bundles/NavBar/NavBar.cmi ../../client/bundles/NavBar/NavBar.bs.js : mij client/bundles/NavBar/NavBar.ast
-o client/bundles/Auth/Login.ast : astj ../../client/bundles/Auth/Login.res
-o client/bundles/Auth/Login.d : deps client/bundles/Auth/Login.ast
-o client/bundles/Auth/Login.cmj client/bundles/Auth/Login.cmi ../../client/bundles/Auth/Login.bs.js : mij client/bundles/Auth/Login.ast
-o client/bundles/Auth/Signup.ast : astj ../../client/bundles/Auth/Signup.res
-o client/bundles/Auth/Signup.d : deps client/bundles/Auth/Signup.ast
-o client/bundles/Auth/Signup.cmj client/bundles/Auth/Signup.cmi ../../client/bundles/Auth/Signup.bs.js : mij client/bundles/Auth/Signup.ast
-o client/bundles/HomePage/HomePage.ast : astj ../../client/bundles/HomePage/HomePage.res
-o client/bundles/HomePage/HomePage.d : deps client/bundles/HomePage/HomePage.ast
 o client/bundles/HomePage/HomePage.cmj client/bundles/HomePage/HomePage.cmi ../../client/bundles/HomePage/HomePage.bs.js : mij client/bundles/HomePage/HomePage.ast

@@ -1,2 +1,14 @@
-#Start(1659956575131)
-#Done(1659956575194)
+#Start(1660691707846)
+
+  Warning number 27
+  /home/atout/Desktop/todo/client/bundles/HomePage/HomePage.res:17:15-22
+
+  15 │ let make = (~todos) => {
+  16 │   Js.log(todos)
+  17 │   let (state, setState) = React.useState(_ => todos)
+  18 │   let (text, setText) = React.useState(_ => "")
+  19 │ 
+
+  unused variable setState.
+
+#Done(1660691708021)
