@@ -1,7 +1,7 @@
 import ReactOnRails from "react-on-rails";
 import React from "react";
 
-import { make as HomePage } from "./bundles/HomePage/HomePage.bs";
+import { make as HomePage } from "../bundles/HomePage/HomePage.bs";
 
 const Cont = (props) => {
   return <HomePage todos={props} />;
