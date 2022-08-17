@@ -62,8 +62,8 @@ group :test do
 end
 
 gem 'react_on_rails', '13.0.1'         # prefer exact gem version to match npm version
-gem 'shakapacker', '6.4.0'             # prefer exact gem version to match npm version
+gem 'shakapacker', '6.5.1'             # prefer exact gem version to match npm version
 gem "mini_racer", platforms: :ruby
 
 gem "pg", "~> 1.4"
-gem "mini_racer", platforms: :ruby
+
